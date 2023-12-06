@@ -1,0 +1,29 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+
+- story: account number path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+  - intent: inquire_balance
+  - action: utter_inquire_balance
+
+  - intent: provide_account_info
+  # - action: utter_thank_you_inquire_balance
+  - action: action_inquire_balance
+
+  - intent: check_last_transaction
+  - action: action_transaction_history
+
+  - intent: thanks
+  - action: utter_welcome
+
+

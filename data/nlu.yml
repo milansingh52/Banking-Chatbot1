@@ -1,0 +1,164 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - namaste
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: inquire_balance
+  examples: |
+    - I want to check my account balance.
+    - What is my account balance
+    - what is my balance
+    - do you know my account balance?
+    - can you show me my balance?
+    - please show my account balance.
+    - my account balance is what?
+    - i want to see my account balance 
+    - how to find my account balance
+    - please tell me my remaining balance.
+    - what is my remaining balance. 
+    - check my account balance 
+    - show my account balance
+    - Tell me how much money is in my account.
+    - Give me the details of my account balance.
+    - "Inform me about the current balance in my account.
+    - Display my available balance.
+    - Provide information on my account balance.
+    - What's the balance in my account?
+    - Could you check my account balance, please?
+    - I'd like to know the current balance of my account.
+    - Show me the balance in my account.
+    - Any idea about my account balance?
+    - Inform me about my available funds.
+    - Can you provide details about my account balance?
+    - Check my balance, please.
+    - I'm curious about my account balance.
+    - What's the remaining balance in my account?
+    - Please display my current balance.
+    - Tell me the available funds in my account.
+    - I'm wondering about my account balance.
+    - How much money do I have in my account?
+    - Could you let me know my balance?
+    - Share information about my account balance.
+    - I want to inquire about my balance.
+    - I want to check my financial status.
+    - What's my current financial situation?
+    - Show me details about my money.
+
+
+- intent: provide_account_info
+  examples: |
+    - My account number is [11111234](account_number), my name is [Milan Singh](user_name), and my phone number is [9844900891](phone_number).
+    - My account is [11112345](account_number), my name is [Durga Acharya](user_name), and my phone number is [9855678789](phone_number)
+    - Account number: [11113456](account_number), I am [Prashan Thakur](user_name), and my phone number is [9856445566](phone_number)
+    - This is my account: [11114567](account_number), and I am [Neeru Dhungana](user_name), and my phone number is [9876789876](phone_number)
+    - Account number: [11115678](account_number), Name: [Jayanti Ghishing](user_name), Phone number: [9876789876](phone_number)
+    - My account is [11116789](account_number), my name is [Ganesh Bhandari](user_name), and my phone number is [9867543421](phone_number)
+    - Account: [11117890](account_number), Holder: [Indira Guragain](user_name), Phone number: [98564534214](phone_number)
+    - Account number: [87654321](account_number), Name: [Sudha Sharma](user_name), Phone number: [9876543210](phone_number).
+    - Account: [98765432](account_number), Holder: [Diwas Bhandari](user_name), Phone: [9998887776](phone_number).
+    - This is my account: [12349876](account_number), I'm [Ashmita Chand](user_name), and my contact is [8765432109](phone_number).
+    - Account no: [56781234](account_number), Name: [Saroj Koirala](user_name), Contact: [7654321098](phone_number).
+    - Account number: [56781234](account_number), Name: [Chris Thompson](user_name), Contact: [7654321098](phone_number).
+    - My account is [98765432](account_number), and I'm [Sophia Williams](user_name), contact: [8765432101](phone_number).
+    - Account number: [76543210](account_number), Owner: [Santosh Adhikari](user_name), Phone: [9999999999](phone_number).
+    - Account number: [76543210](account_number), Owner: [Aman Humagain](user_name), Phone: [9999999999](phone_number).
+    - I have an account with number [54321098](account_number), my name is [Manmohan Bhandari](user_name), and phone: [9876543219](phone_number).
+    - For account [87654321](account_number), I'm [Olivia Anderson](user_name), reachable at [8888777766](phone_number).
+    - Account: [87654321](account_number), Holder: [Jagarnath Giri](user_name), Phone: [8888777766](phone_number).
+    - I'm [Jitendra Malla](user_name), account number is [98765432](account_number), and phone number is [1234567890](phone_number).
+    - Account details: [12345678](account_number), Name: [Bob Smith](user_name), Contact: [9876543210](phone_number).
+    - My name is [Rahul Thakuri](user_name), account number [87654321](account_number), and contact number is [9876543210](phone_number).
+    - [Goma Pandey](user_name) here, account number [56789012](account_number), and phone [8765432109](phone_number).
+    - Account: [34567890](account_number), Owner: [Prakash GC](user_name), Phone: [9998887776](phone_number).
+    - Account: [34567890](account_number), Owner: [Suskata Singh](user_name), Phone: [9998887776](phone_number).
+    - My account number is [23456789](account_number), and I go by [Mohan GC](user_name), reachable at [9876543210](phone_number).
+    - Account number: [23456789](account_number), Name: [Ramesh Pun](user_name), Contact: [9876543210](phone_number).
+    - For account [98765432](account_number), the name is [Alice Johnson](user_name), and the contact number is [1234567890](phone_number).
+    - My details are as follows: account number [12345678](account_number), Name: [Gauri Neupane](user_name), Contact: [9876543210](phone_number).
+    - I am [Ella Davis](user_name), account number [87654321](account_number), with contact number [9876543210](phone_number).
+    - Account holder: [Ethan Miller](user_name), account number [56789012](account_number), reachable at [8765432109](phone_number).
+    - Account: [34567890](account_number), Owner: [Santosh Khanal](user_name), reachable at [9998887776](phone_number).
+    - Owner of account [34567890](account_number): [Sophie Turner](user_name), contact number: [9998887776](phone_number).
+    - I go by [Charlie Brown](user_name), and my account number is [23456789](account_number), reachable at [9876543210](phone_number).
+    - For account [23456789](account_number), the name is [Charlie Brown](user_name), and the contact number is [9876543210](phone_number).
+    - I am [Saroj Pandey](user_name) with account number [65432109](account_number), and my contact number is [9876543210](phone_number).
+    - The account [78901234](account_number) is registered under [Michael Johnson](user_name) with the contact number [8765432109](phone_number).
+    - [Rahul Maske](user_name) is the account holder for [45678901](account_number) with contact number [7654321098](phone_number).
+    - My account number is [98765432](account_number), and I'm [James Wilson](user_name) with the contact number [9876543210](phone_number).
+    - [Harilal Subedi](user_name) owns the account [89012345](account_number) and can be reached at [9876543210](phone_number).
+    - I'm [David Miller](user_name), account number [67890123](account_number), and my contact number is [9876543210](phone_number).
+    - The account [56789012](account_number) belongs to [Emma Garcia](user_name), and the contact number is [8765432109](phone_number).
+    - [Ramesh Roka](user_name) is the account holder for [23456789](account_number) with contact number [9876543210](phone_number).
+
+- intent: check_last_transaction
+  examples: |
+    - What is the last transaction on my account
+    - Please show my last transaction history of my account
+    - Show me account history
+    - What is my last transaction history
+    - Show my account statement
+    - Can you show my transaction history
+    - Show my last transaction status
+    - Tell me about my recent transaction
+    - What was the most recent activity in my account
+    - Display details of my last transaction
+    - Give me information on the latest transaction on my account
+    - What's the status of my last transaction
+    - Can you provide details of my last transaction
+    - Fetch details of my most recent transaction
+    - I need to know the details of my last transaction
+    - Can you give me an update on my recent transaction
+    - What's the recent activity on my account
+    - Tell me the specifics of my last transaction
+    - Please provide information on my latest transaction
+    - I want to see the details of my last financial activity
+    - Fetch my recent transaction history, please
+    - Provide insights into my last transaction
+    - What transactions occurred recently in my account
+    - My transaction history, please
+    - My transaction history
+    - Transaction history
+
+- intent: thanks
+  examples: |
+    - thanks
+    - thankyou
+    - dhanyabad
+    - thank you
+    - many thanks!
+    - appreciate it!
+    - thanks so much!
+    - thank you! That's all I needed.
+    - thanks! That's all I needed
+    - that's all. thank you!
+    - ok. thank you
+    - great! thank you so much
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - see you soon

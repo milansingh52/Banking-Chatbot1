@@ -1,0 +1,64 @@
+version: "3.1"
+
+intents:
+  - greet
+  - inquire_balance
+  - provide_account_info
+  - check_last_transaction
+  - thanks
+  - goodbye
+
+entities:
+  - account_number
+  - user_name
+  - phone_number
+
+slots:
+  account_number:
+    type: text
+    influence_conversation: True
+    mappings:
+    - type: from_entity 
+      entity: account_number
+
+  user_name:
+    type: text
+    influence_conversation: True
+    mappings:
+    - type: from_entity
+      entity: user_name
+
+  phone_number:
+    type: text
+    influence_conversation: True
+    mappings:
+    - type: from_entity
+      entity: phone_number
+
+actions:
+  - action_inquire_balance
+  - action_transaction_history
+
+
+responses:
+  utter_greet:
+  - text: "Hi there! How can I help you today?"
+
+  utter_inquire_balance:
+  - text: "Sure! Can you please provide me with your account number, name and phone number"
+
+  utter_thank_you_inquire_balance:
+  - text: "Thank you! Let me check your account balance."
+
+  utter_welcome:
+  - text: "You're welcome! Have a great day!"
+
+  utter_default:
+  - text: Sorry I didn't Understand. Can you say again?
+
+  utter_goodbye:
+  - text: "Bye"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
