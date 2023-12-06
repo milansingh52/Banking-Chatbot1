@@ -1,4 +1,4 @@
-# Project Description
+# Banking-Chatbot
 "🤖 It is a basic Banking Chatbot, capable of understanding user intents to check account balance, transaction history, and more. Train the bot to handle basic interactions, extract crucial information, and provide personalized responses.
 
 # Project View
